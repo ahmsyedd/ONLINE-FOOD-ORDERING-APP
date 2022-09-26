@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+   <children>
+      <Label alignment="CENTER" prefHeight="65.0" prefWidth="602.0" text="Order-it" textAlignment="CENTER">
+         <font>
+            <Font name="Britannic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label prefHeight="34.0" prefWidth="579.0" text="Hey there, what you would like to have today!">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="15.0" left="10.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <GridPane prefHeight="365.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="acpBreakfast" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imgBreakfast" fitHeight="133.0" fitWidth="200.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnBreakfast" layoutX="118.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#dispCategory" text="Breakfast" AnchorPane.bottomAnchor="6.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="acpMeal" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fx:id="imgEntrees" fitHeight="133.0" fitWidth="200.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnEntrees" layoutX="123.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#dispCategory" text="Entrees" AnchorPane.bottomAnchor="6.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="acpBeverages" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="imgBeverages" fitHeight="133.0" fitWidth="200.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnBeverages" layoutX="115.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#dispCategory" text="Beverages" AnchorPane.bottomAnchor="6.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="acpDesserts" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="imgDesserts" fitHeight="133.0" fitWidth="200.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnDesserts" layoutX="120.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#dispCategory" text="Desserts" AnchorPane.bottomAnchor="6.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <Button fx:id="btnChk" alignment="CENTER" mnemonicParsing="false" onAction="#checkout" prefHeight="35.0" prefWidth="248.0" text="Checkout">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="180.0" top="30.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
